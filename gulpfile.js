@@ -20,13 +20,13 @@ var lst = {
     "scripts":"scripts",
     "scss":"css",
     "ts":"**/*.ts"
-
 }
 /*|watches|*/
-gulp.task('default', function() {
-    console.log(" i am in");
+gulp.task('default',['watch']);
+gulp.task('watch', function() {
+    gulp.watch(bin.script, ['tsc']);
+    gulp.watch(dir.test + lst.ts, ['tst']);
 });
-
 /*|compilers >>>>>>  |*/
 gulp.task('tsc', function() {
     return gulp.src(bin.script)
