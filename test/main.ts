@@ -1,8 +1,8 @@
 
 describe('firest test', () => {
-   // var test = test();
+   var cal= new calculator();
     it('should return 10', () => {
-        expect(5+5).toBe(10);
+        expect(cal.add(2,5)).toBe(7);
     });
         
 });
